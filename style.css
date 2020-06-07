@@ -10,6 +10,21 @@
 	width: 100%;
 	margin: 0 auto;
 }
+.gradient {
+height: 115px;
+background: gold;
+box-shadow: 0 -200px 100px -120px crimson inset;
+border-radius: 30px;
+animation: background 3s infinite alternate;
+}
+
+@keyframes background {
+50% {
+  background: skyblue;
+  box-shadow: 0 -200px 100px -100px yellowgreen inset;
+}
+}
+
 .logo{
 	background-image: url(./img/3D-graphics_Cloud_of_black_cubes_096763_.jpg);
 }
@@ -44,7 +59,7 @@ header .logo_header{
 
 }
 
- 
+
 
 
 .main-menu {
@@ -191,7 +206,7 @@ header .logo_header{
     padding-top: 3%;
     padding-bottom: 3%;
 }
-}
+
 .regist .td{
     padding: 10px;
     position: relative;
@@ -213,7 +228,7 @@ header .logo_header{
     font:72px Courier;
     color: gold;
     text-align:center
-    font-weight: bold;
+
     }
 
 
@@ -456,28 +471,32 @@ transition: all 250ms ease-in-out 0s;
 }
 
 .catalog_counter{
-    font-size: 19px;
-    color: wheat;
-    position: absolute;
-    top: 17%;
-    right: 6%;
+        font-size: 28px;
+        color: wheat;
+        position: absolute;
+        top: 11%;
+        right: 37%;
 }
 
 .container_products {
 	height: 100vh;
-    background-color: bisque;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #FDB931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     padding-top: 10%;
 }
 
-.container_products .item, .wrapper_cart .item{
+.container_products .item, .wrapper_cart .item {
     width: 200px;
-    border: 2px solid gray;
+    border: 6px solid gold;
     border-radius: 20px;
     height: 280px;
     text-align: center;
+    color: g;
+    color: gold;
+    background-color: black;
 }
 
 .container_products .image, .wrapper_cart .image{
@@ -491,7 +510,7 @@ transition: all 250ms ease-in-out 0s;
 	background: black;
 	width: 40px;
 	height: 40px;
-	color: blanchedalmond;
+	color: gold;;
 	position: absolute;
 	top:20px;
 	left: 20px;
@@ -512,6 +531,24 @@ transition: all 250ms ease-in-out 0s;
 }
 
 @media(max-width: 2560px){
+    .countdown {
+        left: 50%;
+        top: 33%;
+    }
+    .timer {
+    font: 104px Courier;
+    color: initial;
+	
+
+    }
+    .container_products {
+        height: 68vh;
+    }
+    .wrapper_cart{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 13%;
+    }
 
 }
 
@@ -522,32 +559,275 @@ transition: all 250ms ease-in-out 0s;
         grid-template-rows: 1fr 1fr 1fr;
         max-width: 1000px;
         margin-top: 5%;
-        margin-left: 15%;
+        margin-left: 16%;
         grid-row-gap: 25px;
         grid-column-gap: 25px;
         align-items: stretch;
-        margin-bottom: 5%;}
+        margin-bottom: 5%;
+    }
        
+    .countdown {
+        left: 33%;
+        top: 27%;
+    }
+    .td{
+        padding: 7px;
+    }
+    .catalog_counter {
+    font-size: 28px;
+    color: wheat;
+    position: absolute;
+    top: 7%;
+    right: 27%;
+    }
+    .container_products {
+        padding-top: 26%;
+    }
+}
+@media(max-width:1366px){
+    .catalog_counter {
+        font-size: 19px;
+        top: 16%;
+        right: 26%;
+    }
+    .container_products {
+        height: 84vh;
+    }
+    .container_products {
+    padding-top: 12%;
+    }
+    .countdown {
+        left: 33%;
+        top: 55%;
+    }
+}
+@media(max-width: 1214px){
+    .catalog_counter {
+        top: 13%;
+        right: 20%;
+    }
+    .container_products {
+        padding-top: 9%;
+        height: 78vh;
+    }
+    .regist {
+        position: inherit;
+        background-color: floralwhite;
+        text-align: -webkit-center;
+        padding-top: 6%;
+        padding-bottom: 10%;
+    }
+
 }
 @media(max-width: 1024px){
+    .foto_str {
+        margin-left: 9%;
+    }
+    .timer {
+        font: 75px Courier;
+        }
     .img{
         vertical-align: middle;
         border-style: none;
         width: 72%;
         text-align: center;
     }
+    	header .bottom_header .menu{
+		display: none;
+	}
+
+    header .bottom_header .show {
+    display: block;
+    margin-top: 201%;
+    margin-left: -260%;
+    color: #fff;
+		}
+		header .bottom_header .burger{
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			background-color: yellow;
+		    margin-left: -33%;
+			position: absolute;
+		} 
+		header .bottom_header .burger i{
+			width: 20px;
+			height: 4px;
+			margin: 5px;
+			background-color: #2d3e50;
+			display: block;
+		}
+		header .bottom_header .menu li a {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 15px;
+            color: #ffffff
+        }
+        .catalog_counter {
+            font-size: 26px;
+            color: wheat;
+            position: absolute;
+            top: 6%;
+            right: 6%;
+        }
 
 }
+@media(max-width: 911px){
+    .catalog_counter {
+        font-size: 15px;
+        top: 20%;
+        right: 34%;
+    }
+    .container_products {
+        height: 132vh;
+    }
+}
 @media(max-width: 768px){
+    .foto_str {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        max-width: 1000px;
+        margin-top: 11%;
+        margin-left: 16%;
+        grid-row-gap: 26px;
+        grid-column-gap: 6px;
+        align-items: stretch;
+        margin-bottom: 5%;
+    }
+    .catalog_counter {
+        font-size: 17px;
+        color: wheat;
+        position: absolute;
+        top: 7%;
+        right: 24%;
+    }
+    .container_products {
+        background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #FDB931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 10%;
+        height: 70vh;
+    }
 
 }
 @media(max-width: 425px){
+    .timer {
+        font: 25px Courier;
+    }
+  .img .kard{
+        max-width: 150px;
+    }
+    .countdown {
+        left: 3%;
+        margin-top: 35%;
+    }
+    .main-menu {
+    list-style: none;
+    margin-top: 30px;
+    display: table-caption;
+}
+.side-button-1 .side-b {
+    font-size: 10px;
+    margin: 40px;
+}
+.catalog_counter {
+    font-size: 9px;
+    color: wheat;
+    position: absolute;
+    top: 37%;
+    right: 26%;
+    }
+    .side-panel {
+        position: fixed;
+        z-index: 999999;
+        top: 0;
+        left: -360px;
+        background: rgba(0, 0, 0, 0.993);
+        transition: all 0.5s;
+        width: 203px;
+        height: 30vh;
+        box-shadow: 10px 0 20px rgba(25, 158, 87, 0.623);
+        color: gold;
+        padding: 40px 20px;
+        font-size: 8px;
+    }
+    .side-title {
+        font-size: 10px
+    }
+    .side-button-2 {
+    font-size: 20px;
+    }
+.main-menu > li > a {
+    text-transform: uppercase;
+    color: gold;
+    font-weight: bold;
+    font-size: 5px;
+    padding: 0 0 0px 0;
+}
+.main-menu li.menu-children:after {
+    font-size: 9px;
+    }
+    .main-menu ul {
+        padding: 0px 0;
+        margin: 0;
+        z-index: 20;
+        min-width: 114px;
+        left: -65px;
+    }
+    header .logo_header {
+        height: 137px;
+    }
+    .main-menu li li.menu-children:after {
+    color: #FFF;
+    font-size: 10px;
+    font-weight: bold;
+    right: 17px;
+    top: 8px;
+    }
+    .foto_str {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 1000px;
+    margin-top: 11%;
+    margin-left: 16%;
+    grid-row-gap: 49px;
+    align-items: stretch;
+    margin-bottom: 5%;
+    }
+    .catalog_counter {
+        font-size: 9px;
+        color: wheat;
+        position: absolute;
+        top: 26%;
+        right: 45%;
+    }
+    .container_products {
+        height: 67vh;
+    }
 
 }
 @media(max-width: 375px){
+    .catalog_counter {
+        font-size: 8px;
+        color: wheat;
+        position: absolute;
+        top: 26%;
+        right: 37%;
+    }
+    .container_products {
+        height: 125vh;
+    }
 
 }
 @media(max-width: 320px){
+    .catalog_counter {
+        font-size: 8px;
+        color: wheat;
+        position: absolute;
+        top: 31%;
+        right: 27%;
+    }
 
 }
 
